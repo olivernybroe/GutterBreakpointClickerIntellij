@@ -7,12 +7,7 @@
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.olivernybroe.gutterbreakpointclickerintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <postStartupActivity implementation="com.github.olivernybroe.gutterbreakpointclickerintellij.NoBreakpointActivity"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.olivernybroe.gutterbreakpointclickerintellij.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
